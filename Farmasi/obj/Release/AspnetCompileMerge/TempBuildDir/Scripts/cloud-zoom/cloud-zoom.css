@@ -1,0 +1,15 @@
+﻿@charset "utf-8";
+
+.cloud-zoom-lens {
+    border: 1px solid #D45C93;margin:-4px;background-color:#fff;cursor:move;
+}
+
+.cloud-zoom-title {font-family:Arial, Helvetica, sans-serif;position:absolute !important;background-color:#000;color:#fff;padding:3px;width:100%;text-align:center;font-weight:bold;font-size:10px;top:0px;}
+
+.cloud-zoom-big {
+    /*-webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);*/
+}
+
+.cloud-zoom-loading {color:white;background:#222;padding:3px;border:1px solid #000;}

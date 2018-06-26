@@ -1,0 +1,56 @@
+﻿@model ContragentViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@string.Format("{0} - {1}", Farmasi.Resources.Translator.Farmasi, Farmasi.Resources.Translator.Registration)</title>
+        
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" /> 
+    <link href="~/Content/login.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="login-page">
+        <div class="form">
+            <img src="~/Content/Resources/logo.png" width="300" height="110" />
+
+            @using (Html.BeginForm("registration", "account", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                <section>
+                    @if (ViewBag.Error != null)
+                    {
+                        <div id="login-alert" class="alert small alert-danger">
+                            @ViewBag.Error
+                        </div>
+                    }
+
+                    @Html.TextBoxFor(m => m.UserName, new { id = "userName", placeholder = string.Format("* {0}", Farmasi.Resources.Translator.PersonalCode), autofocus = true, @class = "form-input", @max = "99999999999", @type = "number" })
+
+                    @Html.PasswordFor(m => m.Password, new { id = "password", placeholder = string.Format("* {0}", Farmasi.Resources.Translator.Password), @class = "form-input" })
+
+                    @Html.PasswordFor(m => m.RepeatPassword, new { id = "repeatPassword", placeholder = string.Format("* {0}", Farmasi.Resources.Translator.RepeatPassword), @class = "form-input" })
+
+                    @Html.TextBoxFor(m => m.ContragentFullName, new { id = "fullName", placeholder = string.Format("* {0} ({1})", Farmasi.Resources.Translator.FullName, Farmasi.Resources.Translator.InGeorgian), @class = "form-input" })
+
+                    @Html.TextBoxFor(m => m.ContragentPhone, new { id = "phone", placeholder = string.Format("* {0}", Farmasi.Resources.Translator.Phone), @class = "form-input", @min = "500000000", @max = "599999999", @type = "number" })
+
+                    @Html.TextBoxFor(m => m.Email, new { id = "email", placeholder = Farmasi.Resources.Translator.Email, @class = "form-input" })     
+                    
+                    @Html.TextAreaFor(m => m.Address, new { id = "address", placeholder = string.Format("* {0} ({1})", Farmasi.Resources.Translator.Address, Farmasi.Resources.Translator.InGeorgian), @class = "form-input" })               
+
+                    <button id="btn-login" type="submit">@Farmasi.Resources.Translator.Registration</button>
+
+                    <a href="/account/login" id="link-authorization">@Farmasi.Resources.Translator.Authorization</a>
+                </section>
+            }
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById('btn-login').className = 'btn-login-animation';
+    </script>
+</body>
+</html>

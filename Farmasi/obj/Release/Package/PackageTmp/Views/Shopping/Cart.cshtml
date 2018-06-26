@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    var products = @Html.Raw(Json.Encode(ViewBag.products));
+</script>
+<script src="~/Scripts/farmasi/controllers/shopping-cart-controller.js"></script>
+
+<div ng-controller="shoppingCart-ctrl">
+    <div id="product-catalog-search-bar" class="col-md-12">
+        <input id="product-catalog-search-box" class="form-control" ng-model="searchProduct" placeholder=@Farmasi.Resources.Translator.Search autofocus />
+    </div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>@Farmasi.Resources.Translator.Image</th>
+                <th>@Farmasi.Resources.Translator.ProductName</th>
+                <th>@Farmasi.Resources.Translator.ProductCode</th>
+                <th>@Farmasi.Resources.Translator.Quantity</th>
+                <th>@Farmasi.Resources.Translator.Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="product in products | myTableFilter:searchProduct">
+                <td ng-click="openProductDetails(product.Id)">
+                    <img ng-if="product.ImageBase64 !== null" class="product-image" ng-src="{{'data:image/gif;base64,' + product.ImageBase64}}" width="70" height="70" />
+                    <img ng-if="product.ImageBase64 === null" class="product-image" src="~/Content/Resources/profile-image.png" width="70" height="70" />
+                </td>
+                <td ng-click="openProductDetails(product.Id)" style="vertical-align: middle;">{{product.Name}}</td>
+                <td ng-click="openProductDetails(product.Id)" style="vertical-align: middle;">{{product.Code}}</td>
+                <td ng-click="openProductDetails(product.Id)" style="vertical-align: middle;">{{product.Quantity}}</td>
+                <td style="vertical-align: middle;">
+                    <input class="form-control input-sm" ng-model="quantity" style="width: 100px; float: left; margin-right: 5px;" placeholder=@Farmasi.Resources.Translator.Quantity />
+                    <a style="float: left;" class="btn btn-sm btn-danger" ng-click="removeFromCart(product.Id, quantity)"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="col-md-12" style="margin-top: 30px; padding: 0;">
+        <a class="btn btn-primary pull-right" ng-click="placeOrder()"><i class="fa fa-check"></i> @Farmasi.Resources.Translator.Order</a>
+    </div>
+</div>

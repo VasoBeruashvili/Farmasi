@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    System.Web.Script.Serialization.JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+    serializer.MaxJsonLength = Int32.MaxValue;
+}
+<script>
+    var products = @Html.Raw(serializer.Serialize(ViewBag.products));
+</script>
+<script src="~/Scripts/farmasi/controllers/product-catalog-controller.js"></script>
+
+<div ng-controller="productCatalog-ctrl">
+    <div id="product-catalog-search-bar" class="col-md-12">
+        <a class="btn btn-info pull-right" ng-click="searchCatalogProducts(searchProductByCode)"><i class="fa fa-search"></i> @Farmasi.Resources.Translator.Search</a>
+        <input id="product-catalog-search-box" class="form-control" ng-model="searchProductByCode" placeholder=@Farmasi.Resources.Translator.Search />        
+    </div>
+    <div class="col-md-3 catalog-row" style="margin-top: 30px;" ng-repeat="product in products">
+        <div class="catalog-product-container" ng-click="openProductDetails(product.Id)">
+            <img ng-if="product.ImageBase64 !== ''" class="product-image" ng-src="{{'data:image/gif;base64,' + product.ImageBase64}}" width="178" height="178" />
+            <img ng-if="product.ImageBase64 === ''" class="product-image" src="~/Content/Resources/profile-image.png" width="178" height="178" />
+            <p class="product-name">{{product.Name}}</p>
+            <p class="product-code"><b>@Farmasi.Resources.Translator.Code:</b> {{product.Code}}</p>
+            <p class="product-price"><b>@Farmasi.Resources.Translator.Price:</b> {{product.Price}}</p>
+            @*<p class="product-code"><b>@Farmasi.Resources.Translator.Rest:</b> {{product.Rest}}</p>*@
+        </div>
+        <div class="form-inline" style="padding-top: 5px;">
+            <center>
+                <input class="form-control input-sm" ng-model="quantity" style="width: 100px;" placeholder=@Farmasi.Resources.Translator.Quantity />
+                <a class="btn btn-sm btn-primary" ng-click="addToCart(product.Id, quantity)"><i class="fa fa-cart-plus"></i></a>
+            </center>
+        </div>
+    </div>
+</div>

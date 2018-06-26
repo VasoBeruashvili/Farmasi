@@ -1,0 +1,134 @@
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\ApplicationInsights.config
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\roslyn\csc.exe
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\roslyn\System.Collections.Immutable.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\roslyn\System.Reflection.Metadata.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\roslyn\vbc.exe
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\roslyn\VBCSCompiler.exe
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\roslyn\VBCSCompiler.exe.config
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Farmasi.dll.config
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Farmasi.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Farmasi.pdb
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\en-US\Farmasi.resources.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Antlr3.Runtime.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\EntityFramework.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\EntityFramework.SqlServer.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.AI.Agent.Intercept.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.AI.DependencyCollector.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.AI.Web.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.AI.WindowsServer.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.ApplicationInsights.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.AspNet.Identity.Core.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.Web.Infrastructure.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Newtonsoft.Json.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\System.Web.Helpers.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\System.Web.Mvc.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\System.Web.Optimization.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\System.Web.Razor.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\System.Web.WebPages.Deployment.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\System.Web.WebPages.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\System.Web.WebPages.Razor.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\WebGrease.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.AI.DependencyCollector.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.AI.Web.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.AI.WindowsServer.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.ApplicationInsights.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\System.Web.Helpers.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\System.Web.Mvc.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\System.Web.Optimization.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\System.Web.Razor.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\System.Web.WebPages.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\System.Web.WebPages.Deployment.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\System.Web.WebPages.Razor.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Antlr3.Runtime.pdb
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Newtonsoft.Json.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\EntityFramework.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\EntityFramework.SqlServer.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.AspNet.Identity.Core.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\FINA Projects\Development\Farmasi\Farmasi\obj\Release\Farmasi.Resources.Translator.resources
+D:\FINA Projects\Development\Farmasi\Farmasi\obj\Release\Farmasi.Resources.Translator.en-US.resources
+D:\FINA Projects\Development\Farmasi\Farmasi\obj\Release\Farmasi.csproj.GenerateResource.Cache
+D:\FINA Projects\Development\Farmasi\Farmasi\obj\Release\en-US\Farmasi.resources.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\obj\Release\Farmasi.dll
+D:\FINA Projects\Development\Farmasi\Farmasi\obj\Release\Farmasi.pdb
+E:\Farmasi\Farmasi\bin\ApplicationInsights.config
+E:\Farmasi\Farmasi\bin\roslyn\csc.exe
+E:\Farmasi\Farmasi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Farmasi\Farmasi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Farmasi\Farmasi\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Farmasi\Farmasi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Farmasi\Farmasi\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Farmasi\Farmasi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Farmasi\Farmasi\bin\roslyn\System.Collections.Immutable.dll
+E:\Farmasi\Farmasi\bin\roslyn\System.Reflection.Metadata.dll
+E:\Farmasi\Farmasi\bin\roslyn\vbc.exe
+E:\Farmasi\Farmasi\bin\roslyn\VBCSCompiler.exe
+E:\Farmasi\Farmasi\bin\roslyn\VBCSCompiler.exe.config
+E:\Farmasi\Farmasi\bin\Farmasi.dll.config
+E:\Farmasi\Farmasi\bin\Farmasi.dll
+E:\Farmasi\Farmasi\bin\Farmasi.pdb
+E:\Farmasi\Farmasi\bin\en-US\Farmasi.resources.dll
+E:\Farmasi\Farmasi\bin\Antlr3.Runtime.dll
+E:\Farmasi\Farmasi\bin\EntityFramework.dll
+E:\Farmasi\Farmasi\bin\EntityFramework.SqlServer.dll
+E:\Farmasi\Farmasi\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Farmasi\Farmasi\bin\Microsoft.AI.DependencyCollector.dll
+E:\Farmasi\Farmasi\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Farmasi\Farmasi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Farmasi\Farmasi\bin\Microsoft.AI.Web.dll
+E:\Farmasi\Farmasi\bin\Microsoft.AI.WindowsServer.dll
+E:\Farmasi\Farmasi\bin\Microsoft.ApplicationInsights.dll
+E:\Farmasi\Farmasi\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Farmasi\Farmasi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Farmasi\Farmasi\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Farmasi\Farmasi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Farmasi\Farmasi\bin\Microsoft.Web.Infrastructure.dll
+E:\Farmasi\Farmasi\bin\Newtonsoft.Json.dll
+E:\Farmasi\Farmasi\bin\System.Web.Helpers.dll
+E:\Farmasi\Farmasi\bin\System.Web.Mvc.dll
+E:\Farmasi\Farmasi\bin\System.Web.Optimization.dll
+E:\Farmasi\Farmasi\bin\System.Web.Razor.dll
+E:\Farmasi\Farmasi\bin\System.Web.WebPages.Deployment.dll
+E:\Farmasi\Farmasi\bin\System.Web.WebPages.dll
+E:\Farmasi\Farmasi\bin\System.Web.WebPages.Razor.dll
+E:\Farmasi\Farmasi\bin\WebGrease.dll
+E:\Farmasi\Farmasi\bin\Microsoft.AI.DependencyCollector.xml
+E:\Farmasi\Farmasi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Farmasi\Farmasi\bin\Microsoft.AI.Web.xml
+E:\Farmasi\Farmasi\bin\Microsoft.AI.WindowsServer.xml
+E:\Farmasi\Farmasi\bin\Microsoft.ApplicationInsights.xml
+E:\Farmasi\Farmasi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Farmasi\Farmasi\bin\System.Web.Helpers.xml
+E:\Farmasi\Farmasi\bin\System.Web.Mvc.xml
+E:\Farmasi\Farmasi\bin\System.Web.Optimization.xml
+E:\Farmasi\Farmasi\bin\System.Web.Razor.xml
+E:\Farmasi\Farmasi\bin\System.Web.WebPages.xml
+E:\Farmasi\Farmasi\bin\System.Web.WebPages.Deployment.xml
+E:\Farmasi\Farmasi\bin\System.Web.WebPages.Razor.xml
+E:\Farmasi\Farmasi\bin\Antlr3.Runtime.pdb
+E:\Farmasi\Farmasi\bin\Newtonsoft.Json.xml
+E:\Farmasi\Farmasi\bin\EntityFramework.xml
+E:\Farmasi\Farmasi\bin\EntityFramework.SqlServer.xml
+E:\Farmasi\Farmasi\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Farmasi\Farmasi\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Farmasi\Farmasi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Farmasi\Farmasi\obj\Release\Farmasi.Resources.Translator.resources
+E:\Farmasi\Farmasi\obj\Release\Farmasi.Resources.Translator.en-US.resources
+E:\Farmasi\Farmasi\obj\Release\Farmasi.csproj.GenerateResource.Cache
+E:\Farmasi\Farmasi\obj\Release\en-US\Farmasi.resources.dll
+E:\Farmasi\Farmasi\obj\Release\Farmasi.dll
+E:\Farmasi\Farmasi\obj\Release\Farmasi.pdb

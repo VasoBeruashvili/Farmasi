@@ -1,0 +1,275 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    padding-top: 10px;
+    height: 100%;
+
+    /*background-image: url("../../Content/Resources/background-pattern.png");
+    background-repeat: repeat;*/
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 80%;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+
+.three-column-navbar {
+    width: 55em; height: auto; margin: 4px 8px; float: right;
+    border-top: solid 2px #d45c93;
+    z-index: 10000;
+}
+
+
+
+#top-line {
+    height: 32px;
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    border-bottom: none;
+    padding: 5px 10px 5px 10px;
+}
+
+#language-bar {
+    float: left;
+}
+#language-bar a {
+    text-decoration: none;
+}
+#language-bar a:hover {
+    text-decoration: none;
+}
+
+#user-name {
+    float: right;
+}
+#user-name a {
+    text-decoration: none;
+}
+#user-name a:hover {
+    text-decoration: none;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+
+.slick-product-container {
+    border: 1px solid #e7e7e7;
+    min-height: 260px !important;
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+}
+.slick-product-container:hover {
+    border: 1px solid #D45C93;
+    cursor: pointer;
+    color: #D45C93;
+}
+.product-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+}
+.product-name {
+    text-align: center;
+    margin-top: 5px;
+}
+.product-code {
+    text-align: center;
+}
+.product-price {
+    text-align: center;
+}
+.catalog-product-container {
+    border: 1px solid #e7e7e7;
+    min-height: 260px !important;
+    padding: 5px;
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+}
+.catalog-product-container:hover {
+    border: 1px solid #D45C93;
+    cursor: pointer;
+    color: #D45C93;
+}
+.catalog-row {
+    padding: 0;
+}
+
+
+
+/*footer*/
+/*footer.nb-footer {
+    background: #e7e7e7;
+    border-top: 3px solid #d45c93;
+    position: absolute;
+    bottom: 0;
+}
+footer.nb-footer .copyright {
+    margin-top: 15px;
+    background: #e7e7e7;
+    padding: 7px 0;
+    color: #999; 
+}
+footer.nb-footer .copyright p {
+    margin: 0;
+    padding: 0;
+}*/
+
+
+
+.menu-block {
+    padding-left: 0;
+}
+.sub-menu-header {
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+.sub-menu-item {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+.sub-menu-item a {
+    color: #222;
+    text-decoration: none;
+}
+.sub-menu-item a:hover {
+    color: #D45C93;
+    text-decoration: none;
+}
+.sub-menu-item-sub {
+    margin-bottom: 3px;
+}
+
+
+#product-details-title {
+    text-align: center;
+    font-weight: bold;
+}
+#product-details-price {
+    color: #D45C93;
+    font-weight: bold;
+    margin-top: 15px;
+}
+#product-details-additional-title {
+    margin-bottom: -15px;
+}
+
+.btn-add-to-cart {
+    position:relative;
+    left: 30%;
+    right: 30%;
+    width: 40%;
+    top: 5px;
+}
+
+#product-catalog-search-bar {
+    margin-bottom: 5px;
+    padding: 0;
+}
+#product-catalog-search-box {
+    float: right;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+/* Tree start */
+.tree {
+    border: 2px solid #d7d7d7;
+    height: 80%;
+    width: 100%;
+    font-size: 13px;
+    /*padding: 10px 30px 0 0;*/
+    overflow: auto;
+}
+
+.tree ul {
+    list-style: none outside none;
+}
+
+.tree ul li {
+    width: 500px;
+}
+
+.tree li a {
+    line-height: 25px;
+    color: #407ea7;
+}
+
+.tree > ul > li > a {
+    color: #3B4C56;
+    display: block;
+    font-weight: normal;
+    position: relative;
+    text-decoration: none;
+    color: #407ea7;
+}
+
+.tree li.parent > a {
+    padding: 0 0 0 18px;
+}
+
+.tree li.parent > a:before {
+    background-image: url("Resources/plus_minus_icons.png");
+    background-position: 25px center;
+    content: ""; 
+    display: block;
+    height: 21px;
+    left: -9px;
+    position: absolute;
+    top: 2px;
+    vertical-align: middle;
+    width: 20px;
+}
+
+.tree ul li.active > a:before {
+    background-position: 0 center;
+}
+
+.tree ul li ul {
+    border-left: 1px solid #D9DADB;
+    display: none;
+    margin: 0 0 0 12px;
+    padding: 0 0 0 25px;
+}
+
+.tree ul li ul li {
+    position: relative;
+}
+
+.tree ul li ul li:before {
+    border-bottom: 1px dashed #E2E2E3;
+    content: "";
+    left: -20px;
+    position: absolute;
+    top: 12px;
+    width: 15px;
+}
+/* Tree end */

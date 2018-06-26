@@ -1,0 +1,172 @@
+﻿@{
+    var _user = (Session["currentUser"]) as UserViewModel;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon" />
+
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/styles.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Scripts/slick/slick.css" rel="stylesheet" />
+    <link href="~/Scripts/slick/slick-theme.css" rel="stylesheet" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/respond.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/moment.min.js"></script>
+    <script src="~/Scripts/ui-bootstrap-tpls-0.13.1.min.js"></script>
+    <script src="~/Scripts/custom-functions.js"></script>
+    <script src="~/Scripts/farmasi/global.js"></script>
+    <script src="~/Scripts/farmasi/services/general-service.js"></script>  
+</head>
+<body ng-app="farmasi-app">
+    <div class="container">
+        <div id="top-line">
+            <div id="language-bar" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@Farmasi.Resources.Translator.ChooseLanguage <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/language/change?lang=ka-GE"><img src="~/Content/Resources/ge.png" /> ქართული</a></li>
+                    <li><a href="/language/change?lang=en-US"><img src="~/Content/Resources/gb.png" /> English</a></li>
+                </ul>
+            </div>
+
+            <div id="user-name" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@_user.Name <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/account/profile"><i class="fa fa-image"></i> @Farmasi.Resources.Translator.Profile</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/account/logout"><i class="fa fa-sign-out"></i> @Farmasi.Resources.Translator.Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        @{ 
+            List<GroupProductViewModel> groupProducts = ProductRepository.GetGroupProducts();
+        }
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="@Url.Action("index", "home")"><img src="~/Content/Resources/logo_black_transparent.png" width="145" height="50" /></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink(Farmasi.Resources.Translator.Main, "index", "home")</li>
+
+                        @foreach (GroupProductViewModel gp_parent in groupProducts)
+                        {
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">@gp_parent.Name <span class="caret"></span></a>
+                                <div class="dropdown-menu row col-lg-12 three-column-navbar" role="menu">
+                                    @foreach (GroupProductViewModel gp_child in gp_parent.Children)
+                                    {
+                                        <div class="col-md-4 menu-block">
+                                            <ul class="sub-menu-item">
+                                                <li class="sub-menu-header">@Html.ActionLink(string.Format("{0} ({1})", gp_child.Name, gp_child.ProductQuantity), "catalog", "product", new { id = gp_child.Id }, null)</li>
+                                                @foreach (GroupProductViewModel gp_sub_child in gp_child.Children)
+                                                {
+                                                    <li class="sub-menu-item-sub">@Html.ActionLink(string.Format("{0} ({1})", gp_sub_child.Name, gp_sub_child.ProductQuantity), "catalog", "product", new { id = gp_sub_child.Id }, null)</li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    }
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/shopping/cart">
+                                <i class="fa fa-shopping-cart"></i> @Farmasi.Resources.Translator.Cart 
+                                @{
+                                    int? cartProductsCount = ShoppingRepository.GetCartProductsCount();
+
+                                    if (cartProductsCount.HasValue && cartProductsCount.Value > 0)
+                                    {
+                                        <span class="label label-success">@cartProductsCount.Value</span>
+                                    }
+                                }
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>       
+    
+    <div class="container body-content">
+        @RenderBody()
+        @*<footer class="nb-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="footer-info-single">
+                            <h2 class="title">Help Center</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> ფარმასის პროდუქცია შეგიძლიათ შეიძინოთ შემდეგ</a></li>
+                                <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> მისამართებზე:</a></li>
+                                <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> ქ.თბილისი, წერეთლის გამზირი 140</a></li>
+                                <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> ტელ: +99597036523</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="footer-info-single">
+                            <h2 class="title">Customer information</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> About Us</a></li>
+                                <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+                                <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Sell Your Items</a></li>
+                                <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Contact Us</a></li>
+                                <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> RSS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="footer-info-single">
+                            <h2 class="title">Security & privacy</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Terms Of Use</a></li>
+                                <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Privacy Policy</a></li>
+                                <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Return / Refund Policy</a></li>
+                                <li><a href="http://www.nextbootstrap.com/" title=""><i class="fa fa-angle-double-right"></i> Store Locations</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>&copy; @DateTime.Now.Year FARMASi</p>
+                        </div>
+                        <div class="col-sm-6"></div>
+                    </div>
+                </div>
+            </section>
+        </footer>*@
+    </div>
+        
+    @Scripts.Render("~/Scripts/slick/slick-slider-js")    
+    @RenderSection("scripts", required: false)
+</body>
+</html>

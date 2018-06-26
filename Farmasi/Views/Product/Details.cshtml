@@ -1,0 +1,86 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/jquery.js"></script>
+@Styles.Render("~/Scripts/cloud-zoom/cloud-zoom-css")
+@Scripts.Render("~/Scripts/cloud-zoom/cloud-zoom-js")
+
+<script src="~/Scripts/farmasi/controllers/product-details-controller.js"></script>
+
+@{ 
+    var product = ViewBag.product as ProductViewModel;
+    var firstImgSrc = product.Image != null ? string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(product.Image)) : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAMgAgMAAACmHu77AAAAA3NCSVQICAjb4U/gAAAADFBMVEX////////MzMzc3NxVkRDDAAAABHRSTlMA////sy1AiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAAWdEVYdENyZWF0aW9uIFRpbWUAMTEvMjYvMTOruYANAAAU5klEQVR4nO2dS27ryhVFM0mKAIHQfQ6BjetRCBmBEYiCn1vqBAjuKJjMgUCa7hi4z1FVnVMfkpZMqmRu37d3wxY/omrxU59TVZt/K34T/W3rBOQSQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQVI9vL/3eY60VnlAfnRnvWY51FplASk7qz7HsdYqC0jrQJ5zHGutcoDIBdn2kuQAqRXklOFga5UD5Hxn/bso3rrukOFga5UDZHBPx7DpvZUBpBSA8x22v/1oa5UBpNbsauiebj/aWmUAqfQhr7bMgDOAtPpo7Lrj7UdbqwwgTaefuu7SfvdVBpDBX4dhw2wrB4gvPtoNs60MIOERr34XkHrDSsrtIGUoPX4bkN2GJWJWkPL3A/mz+3nzgZfpPiBtaC8+/DqvP+fQD+/nhbfj4y/d+f315p+OlRVEE1dH7cX2YLgORXU0MYpj40vPzLdhDpBJVbGNmvBnkLITkKE7tp3/Gh7IuGEobXh37s8gtYCc/x8rrcWUmbPqHAXiuM57TvBP0/Ldm4UzSCMg5wt1rLXw32WuBeSoa43rvK1FkwbwGaQTkHNb+LjTC1FnrmBmAenHK06FSam95drDzgYhq2Npwiy70AobfetGZWlYpY9t6e610rVO2oNrClfni/EcPeNV5rZLlqZu+pDsJL9q7DlvD64FWclzrnlcm7k1mSX4kGbA2oZ3/9tDY7dWR5d0bb00mYNgecJBJkDnpW14V4VsD8PJLFXHxt5UCtBkDlTkCdAlJNqGdyVle3Rc1XHY261ySw2AILYgDyS+DW+zrfboFiuJTGjRnruinC8a70n8E2NPfisFv2YJku3mLthz9o8ISahE2ZPfClclQLWC7HP8clCerrch6lWYgLjVlayWqknuGkomkHIIFXdfdru7aApil3PXUHL16joSexP5aqH7pLGuKr1guQv2bP3sjqQv4nO9cyBu0ce8OikfM/2wKtuAAUtiTnYVgZxCdutXuwIkdw0l48gHQ2JSF26achbEFe25ayg5h3CU7t66CmKvRe4aStaxKK1tFI5B5B7yqx3ZkDsClhOktA9JG4E8zYC4D9lDeVlHB9lSPHqMZ0Fsrpa9hpIXxLZur4HYTDl7DSUviG3kXgc5mT99zh8ucg88MwGVayD2ycleQ8kA8vgePjefACkcyM2/O9LtIE1URpv6yLVcyxbt2WsomUFMqXetHLGFept9/M0WIMc71FBygES3uwPpZWk3D2LWZK+h3AFkXI2fgJhP2WsoGUDaCchelup5EEOav/s3B0jvPxuQXQTSz4Gcd8hfQ8kCso8+95M2+zxI+E4m3Q5SRWfX3GbjKMoE5Hw58tdQMoDUUY3cPvijAN0E5Fy05y/Ys4CErNRGS32f4vAByPAMCbKLOkNdn9so9usWIpDmkL+GkqVXN3qMTdIbeQA0Gu+2JSCuhvKYc4ZDjl5d/+S60ZmajbmHZwakPbqCvcmZd2UZ06hPu/aCumUHNANSdZggrfYhlq5rXR8a19s7A1K7SB4cSK1x+FZuMvdPOndnQHbyBTQQCcwVDzpqY5BHJYmNpiB78x8NxPaOvBePYRyNAXuQ0z4DUqKCVDp/RBK2M2DaXTIDovkcHIif0aPF3BCPDpoBkdErcCA6x8rXHttoaQ5EWsd4IHIJXnSxjC7P9wIp32IOm4FdmpboRz/ss/y6Va5I40M61rK8WI3S0AMiyCJp6OHbg2jlzI1OyaMtQHzoYejzHXQLEB9nydlO3Aakt//L7w6iLfY6Z4N3CxAtG9ucAeAtQLSwzxoA3gJEC3Y32DGTtgDxU2JzHnQDEB+a/F/Oo345yIPEWnLry0GqO1kqbAJyj+NuAXIXR4UtQE73OO7XP+x3mthHEyQ0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBLmoy6Oc7qL7gGT32LguglwUQdaLIBdFkPUiyEX9NiC/Tcm+gQiCJoKgiSBo+quDPAwvr2Hpz+7XRzu+uSlK5dsx7P/eRV9OtphtK8elrQB5f3XOeb2ueBvZy0rJbpziW9nvLdq/Td7dZZzreucqX7iXxq0bMb8CZHh2adEfjF3iRbauVXdu+tuzm2Kp+5fd5MtPOly+XP+CsnUgbrqeLDddJ86GE5BW5vG10f4yaVFSO7g9BKROIO8PsosntCYu8SMQdQYdov2TyZf63r5WpytPDnVXkKp76X/oRajNA/KW3hACUnbHVzP5eHfe/1H23xlT+Uc97VXX/SrfulOrfuAv55xjVRtgFUhzfjy9kW9j05S+jEtAamfU+Owsa8T7057wOv5y2T07kNqejnXv9VoFYl089a1V6mAaj68WEGu2UXbOq0In6rubSuYdd+JC0Mq25yL1J7kvyIsaCRQhfWVyZwtIa09td2xc2o/hrzgOyXsZzns6O0058JqHZA3IHzpnuC/C+Uv8/AVE7bzdf2f75J2l94WfSlJ2/7KH7PTAyxO1CsQbCfRFsA5K3mElIGrn7f6LAb5mEfsieOcOnbsJNQeIDvVZrQJ5in5P7VxiCyEFUTtvLST6MCvUeT61vmw5FuFdRbs10wBWgewlYea/Guwk71MREL2LDmH/nS99TtGXNSvTbSuyrVUgvaTWpMXnVnG2JSAOTf/vZkDkO7U4BfdyqBXZ1ioQTe0pvhBDlNcIiD4OT/FKTexTlGKXlXsTuGHFVJkbQEoHordBMwU52YU6vvUTEP9ll3n7I6wxP1wD4p+Kp/jBjE31EhDdpZyAhC87EE3/GsPsNSDye+KuupfV8SteBGQvCyfZ/xQdxYHol+3J8XfUGvutG0CKW0BGZ8GB6OO2xlR+XXvEyaQlJL+OirHkuU4zKr9HYpZrHw//uK1xdrsdJCRtXySfL4LUl0H6Yqm2AmnTy+lAdPsWIG0EcirC5/1lkIcuPQsmnwrb19g43gziM5jy8yCP8vqCj0A2uSLLQR4GjVaMQYL2i1P19SAuvcfvD+Kux+u3B7Ghq5e++PYg5l2Cr8U47/6GIDbUW8yDhAMs11eD7DSS991B/MvopyX7xiALS3Z9G1QxrWttC7K0ruVjVpcqjWv01dX44Go8bY9sClJHIL3f5QJI3LwcNXU3BtnL0kwLsQ8LhYL4fqspiD/wFpXGi8GHPiwUAhLiJtMoSmizfyOQ3Uxcqwkgy1N1K8jFuFYfFooRiAt2dUmk0R/hq8JBMUgIbw7TkGkfFooRiHuroOZhbRppbLYAuRTE7sNCoSCyl3ursIbymzT2+1Uh0wSk8ZHgabdCHxaKUfbrrM21nHcdPRqa/LIgdgKib+3wqTC6DuL6eCVQv+ve0v6RL+pWSEAu9Vj1YaFIqyi7o7UE3KmTeSvdpnZjck4+q5tB9E3TycvNL4HYldXBeRt20k3i8infV7dfnqqbQeTVCtpZ7XS19js8uaPYzsMf2s/eaKt+eaJuBxFvvDZ5QC+1R8ztc755hmNZ2JEPxz87Hfmg/exf1T2dgrR2mFLqY3axhWhHSfXakRuPRall44pMKwPI+deP3iX+KohJ+bsZN+OKDhccei78WJTufVjn7XY7iAz3ScqwC8GHQUYyyaslajdSqNWhAvEQqEXKABK7xIsugFQS7tEn4Ye1N99ovJZ8EJDYJV50AcTvrXWbBzMe0hvOrr0gWUaZ1ot+/Mfc3gpiDOf/Pd74KWUZLlu+X98n6GFmb1/fLVP/+c8LZNzv7a8VJEherWmBpNoUJLSTV45ajrTtFfl9QOIo123aGEQejVVj5lJtC6Kl+6o2YaptQTSKsqpNmGpbEI2irGoTptoWRPqvylVtwlTbgkiPYnt77rt1yW4bIw/d7bnv1iCNCz5kmGy9MYhrEmZ4RLYGkQb/7Y/I5iA/7AXpbz/Q1iB2Yt9rhuNsDjLb8l2h7UEyiSBoIgiaCIImgqCJIGgiCJoIgiaCoIkgaCIImgiCJoKgiSBo+jzIrY6xdvzSdBDTY+LDt/5HFoDc2BduB95N+9jScUHrf4Qgi0WQz4kgi0WQz4kgi4UDkqNkRwDJIoJcFUHWiSBXRZB1IshVLQcp36Yu8eWf3c9+du/EIz6APHbqFm9BvPG8B3kcXuYP+JEWl+zWMv402jbouMQw+Mq1xSOP+Lhkt+PmXu1HA9L6Q3ozscUDHRfXtdqZwZS1n8AXbCcGZx8dRixGda0yGpF5BommzSnIMJkRmBtE5qSmvzH4hAV3EZv82CM+Aqmi1WeQaCJj6op2T5B6Zlio2MibhIVpB84QIsKOQBy4+3wGGcLU0viyL5uQuBSkNVbwQ3qyjPm7sXs/ReYAYuASecQHEGsPfz7IwYHsnHe8uH076O7ojebvBDLIzOE+2tLIbRS7i+zcnO/IIz6A1LLazWE/VGYKZdnJnev+uqnvS2aQLQSReQVNMgZ8iKzTg2XLfuQRH0AqXd1bEOci0srFOnnGZXMYFoLsdOr3U7xBsiVrZOQtW/oi9YgPIDL9xc1+aQ6DGFgcPIiQNksekoUgkiuNTFAclfWl0AmFNh9OPOIDyKBTpU8WRPIHuQqnQLDIdn0hiJYTEzeXQoxmdNKtXRDCegzyLN+ziT56k5feP4hH2WHB074YxC3EMzl1unflXgUhIJEXm0txAPHTx9195i3X9945UM1TFgz+Xwii6YzdfRTOAuklMzWPkbWAgvj6lID4p+rkcxS5Eksmvi4F0TvnGsjweZDYqEpyFNlhiRlSBhD9nBhhm2SnHvEexLvu2TWNprr0IL6e0y6YDLfy1oqtvBIQPZuJP91lEFmyT0SSoywyDFsJEs+VSEB8re+0GMTcjUmOssiLbmX2OycBefI7e6UgXgKiR2wOo7O1yFJ6Mcjpwx3cra1GU/v4m/MgnQPRRe+e6R/AJa8eXVyyf5y1SwEuL6vpw4bdPEg5AvFFj2/Gl/cD2V2oyGndyXxOHtN6HsQZWoUs1txRY5DTp5O3uPb7sW2Je8GKuy8SkHYepBqBVB5Er/odQUxr7nV++w83v1Mq5dGFkxmsY5AH1+AK4SAP4q1wijuCtB/MtnvvZKJqJa0M3aAe8SOQh7fuOsg9r0jdzZE8dp2CuMdc747gEZ+AmJbtBMR804F0Xp+v/i4OB9lfGT0nLiLxhwXZhTq7j4aMQWxsrDsOm4LMvP1QkvsfATn5BMce8TGIC5K8bguSvtQxrPkp16L0tfHUIz6NonQmkroxiAn8pJdksKnVcthVYvdC6D3iIxAD/kvXbAhiI7ensGFnbQI8iEmeMkUe8XFTV1Z/CLKgYXgTiCGJfktfgaYgB826Eo/4uGElRxqBVF8PUrzFNRVtGglIc9CX7CQe8QHE+zBOQCYF4gKtAym7qAoSXpm2N/9MoV6Jf6R8IwXxNejhgyrKF4Ikbz8MBkB7TY86euoeCYj60X4Isso1bCVI5JHjg3UCYm6r1kV7Y4/4AOL5RiDT2u8SrQSpY5CnZJ150F0NJfGIj0A837X2yBItBNHhrpGPlAcUEHNhnAeu3utjEP9msmstxDtWGkP3h/8J3x71ceGT7Jb0lQSQYFiZttmHmTb7JiAaczYgpxhkNw+iTd39GKQKILotO0hIxBREM4DuqQyVFaN6HkSauv5I07jWHcNBl0D03Jp3U/cxSDUPUgtIfAOmkcYlryZYCnKIFhREPupLURsPIiketdlDF4oDeY6Ok8Z+7xgybXxU8RTWyylVT6b2IK8BTD3iJ9lvKyCea+8bAcJ2zyC2j7zvxyA7BamO8obJ1CN+AuIso5s//Lt1+0n/yP26FTRnqqZVlOrFb2v1Vd/2n3jEj6soZedK9hftiOj0R9SSLungywyivaDx66F1LMY/BaQOIDaJ4hEfgdj96qMt/5tnjRbHfYhujzt2ve1m3v2tvdP/8NV5yZdSj/io9ivlvi3im+dBzLGfPYjU/xeZHi6PNPbFqC9f3/fw3+75725HOZOpR/yoPXI+3U33XwMivdcWIe1nv2P3tLPeL5PGdOWM44+ltBt9CzD1iE9biOfV+8a0appnm+w6HsLhArNvF+LMt4O04hK/DxtqZ4j3XGgDWEFSj/ioV7frfg5niNaBlO77x/AjJvzw822Zo9vK0UHHZIPVyb+4XUvG1CM+jaKY0UCVA/G7BZBKD3k/kCLEQL0auyr4RvoKbeIRH0B0nNpOQKoQ8/u68VouFan7XS0ntPQg/itd8IiPIo1DtPoM4gJ28Y+4i3a6D4hqxv3u7aOzN+sR70YsvqbLI2NAEx1+WZSsFcNlZ9zvHifjTj/e12g8hWPGeP79o0N+oL/gFFdwEQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0EQRNBEETQdBEEDQRBE0EQRNB0EQQNBEETQRBE0HQRBA0/R84Ie+Q+GnukgAAAABJRU5ErkJggg==";
+}
+
+<div ng-controller="productDetails-ctrl">
+    <div class="col-md-12">
+        <h4 id="product-details-title">@product.Name</h4>
+    </div>
+
+    <div class="col-md-4">
+        <div class="zoom-section">
+            <div class="zoom-small-image">
+                <a href='@firstImgSrc' class='cloud-zoom' id='zoom1' rel="adjustX:20"><img src="@firstImgSrc" width="350" height="350" alt='' /></a>
+            </div>
+            <div class="zoom-desc">
+                <p>
+                    @{
+                        foreach (ProductImageViewModel productImage in product.Images)
+                        {
+                            var base64Image = Convert.ToBase64String(productImage.Image);
+                            var imgSrc = string.Format("data:image/gif;base64,{0}", base64Image);
+
+                            <a href='@imgSrc' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '@imgSrc'"><img style="border: 1px solid #b4b4b4; margin-top: 5px;" class="zoom-tiny-image" src="@imgSrc" width="80" height="80" /></a>
+                        }
+                    }
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <p><h4 id="product-details-price">@Farmasi.Resources.Translator.Price: @product.Price @product.Currency</h4></p>
+        <br />
+        <p id="product-details-additional-title">@Farmasi.Resources.Translator.Additional</p>
+        <hr />
+        <p><b>@Farmasi.Resources.Translator.Rest:</b> @product.Rest @product.UnitFullName</p>
+        <p><b>@Farmasi.Resources.Translator.ProductCode:</b> @product.Code</p>
+        <p><b>@Farmasi.Resources.Translator.AboutProduct:</b> @product.Comment</p>
+        <br />
+        <div>
+            <div class="col-md-2" style="padding: 0;">
+                <b>@Farmasi.Resources.Translator.Colors:</b>
+            </div>    
+            <div class="col-md-10" style="padding: 0 0 0 5px;">
+                @if (product.Colors != null)
+                {
+                    foreach (ProductColorViewModel color in product.Colors)
+                    {
+                        <a href="/product/details/@color.ProductId" style="width: 35px; height: 35px; border-radius: 3px; float: left; margin-right: 5px; background-color: @color.Color"></a>
+                    }
+                }
+            </div>         
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="form-inline">
+            <input style="width: 100px;" class="form-control input-sm" ng-model="quantity" placeholder=@Farmasi.Resources.Translator.Quantity />
+            <a class="btn btn-sm btn-primary" ng-click="addToCart(@product.Id, quantity)"><i class="fa fa-cart-plus"></i></a>
+        </div>
+    </div>
+
+    <div class="col-md-2"></div>
+
+    <script>
+        var div_click_escape = function (eventObject) {
+            return false;
+        };
+
+        $("#zoom1").click(div_click_escape);
+        $("#zoom1").mousedown(div_click_escape);
+        $("#zoom1").mouseup(div_click_escape);
+    </script>
+</div>
