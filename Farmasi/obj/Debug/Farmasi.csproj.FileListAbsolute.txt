@@ -195,7 +195,6 @@ C:\All Data\Projects\Fina Projects\Farmasi\Farmasi\bin\EntityFramework.SqlServer
 C:\All Data\Projects\Fina Projects\Farmasi\Farmasi\bin\Microsoft.AspNet.Identity.Core.xml
 C:\All Data\Projects\Fina Projects\Farmasi\Farmasi\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\All Data\Projects\Fina Projects\Farmasi\Farmasi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\All Data\Projects\Fina Projects\Farmasi\Farmasi\obj\Debug\Farmasi.csprojAssemblyReference.cache
 C:\All Data\Projects\Fina Projects\Farmasi\Farmasi\obj\Debug\Farmasi.Resources.Translator.resources
 C:\All Data\Projects\Fina Projects\Farmasi\Farmasi\obj\Debug\Farmasi.Resources.Translator.en-US.resources
 C:\All Data\Projects\Fina Projects\Farmasi\Farmasi\obj\Debug\Farmasi.csproj.GenerateResource.cache
